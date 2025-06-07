@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omar Qapil - Cybersecurity & DevOps Professional</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<header>
+  <h1>Omar Qapil</h1>
+  <p class="subtitle">Cybersecurity & DevOps Innovator</p>
+  <nav>
+    <!-- Replaced text buttons with icon buttons -->
+    <button onclick="scrollToSection('about')" title="About Me">
+      <i class="fas fa-user"></i>
+    </button>
+    <button onclick="scrollToSection('cv')" title="My CV">
+      <i class="fas fa-file-alt"></i>
+    </button>
+    <button onclick="scrollToSection('experience')" title="Experience">
+      <i class="fas fa-briefcase"></i>
+    </button>
+    <button onclick="scrollToSection('projects')" title="Projects">
+      <i class="fas fa-code"></i>
+    </button>
+
+    <div class="social-icons" role="group" aria-label="Social Media Links">
+      <a href="https://www.linkedin.com/in/omarkapil" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn" width="40" />
+      </a>
+      <a href="mailto:omarkapil012@gmail.com" title="Email" aria-label="Email">
+        <img src="images/email.png" alt="Email" width="40" />
+      </a>
+      <a href="https://wa.me/201009774927" target="_blank" title="WhatsApp" aria-label="WhatsApp">
+        <img src="images/whatsapp.png" alt="WhatsApp" width="40" />
+      </a>
+    </div>
+  </nav>
+</header>
+
+
+<main>
+  <section id="about" class="fade-in">
+    <div class="curved-decor decor1"></div>
+    <h2>About Me</h2>
+    <div class="about-container">
+      <div class="photo-placeholder">
+        <img src="images/my_photo.jpg" alt="Omar Qapil" width="300" />
+      </div>
+      <div class="about-text">
+        <p>Hi, I’m Omar Qapil – a highly motivated and detail-driven final-year Computer Science student specializing in Cybersecurity and DevOps. I’m passionate about ethical hacking, network defense, and using automation to protect digital environments.</p>
+        <p>With certifications in CCNA and Network Security and hands-on experience in tools like Kali Linux, Wireshark, and Python-based IDS systems, I bring both technical know-how and a growth mindset to every challenge.</p>
+        <p>I believe in continuous learning and strive to make a meaningful impact in the cybersecurity world.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv" class="fade-in">
+    <div class="curved-decor decor2"></div>
+    <h2>My CV</h2>
+      <!-- CV Preview -->
+  <div class="cv-preview">
+    <iframe src="files/OMAR_QAPIL_CV.pdf" title="CV Preview" frameborder="0"></iframe>
+  </div>
+    <p>Download my full CV to explore my qualifications, skills, and journey in tech.</p>
+    <a href="files/OMAR_QAPIL_CV.pdf" class="btn-download-cv" download>Download CV</a>
+  </section>
+
+  <section id="experience" class="fade-in">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Cybersecurity Intern – IEEE Egypt Section</strong><br />
+        Applied Linux, Bash scripting, and Python tools to real-world scenarios. Explored encryption, malware analysis, SIEM, and DFIR in cloud environments.</li>
+
+      <li><strong>Cybersecurity Intern – Information Technology Institute (ITI)</strong><br />
+        Mastered advanced networking and cybersecurity fundamentals in intensive training programs.</li>
+
+      <li><strong>DevOps Intern – ISTEM EC</strong><br />
+        Learned and implemented DevOps architecture, CI/CD pipelines, and cloud integration concepts.</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project-card" tabindex="0">
+      <div class="project-title">Machine Learning-Based IDS</div>
+      <p>Developed a lightweight Intrusion Detection System using Python and ML. Integrated real-time threat detection with Wireshark/Nmap packet analysis and a custom GUI interface.</p>
+    </div>
+    <div class="project-card" tabindex="0">
+      <div class="project-title">Interactive Portfolio Website</div>
+      <p>A responsive and engaging personal website (this one!) designed using HTML, CSS, and JavaScript to showcase my work and passion.</p>
+    </div>
+    <div class="project-card" tabindex="0">
+      <div class="project-title">Real-Time Chat App</div>
+      <p>Built a live messaging platform with WebSocket, offering real-time updates and seamless user communication.</p>
+    </div>
+  </section>
+</main>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function onScroll() {
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const triggerBottom = window.innerHeight * 0.85;
+
+    fadeEls.forEach(el => {
+      const elTop = el.getBoundingClientRect().top;
+      if(elTop < triggerBottom) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('load', onScroll);
+</script>
+</body>
+</html>
