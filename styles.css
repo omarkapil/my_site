@@ -1,11 +1,4 @@
-/* ---------------------------------------------
-   Google Fonts Import
---------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-
-/* ---------------------------------------------
-   Root Variables (Dark Professional Theme)
---------------------------------------------- */
+/* Root Variables */
 :root {
   --color-primary: #0A66C2;
   --color-secondary: #004182;
@@ -16,11 +9,10 @@
   --color-text-secondary: #A3A5A8;
   --color-border: #2E333B;
   --transition-duration: 0.3s;
+  --glow-color: rgba(70, 52, 231, 0.7);
 }
 
-/* ---------------------------------------------
-   CSS Reset and Base Styling
---------------------------------------------- */
+/* Reset and Base */
 * {
   box-sizing: border-box;
 }
@@ -34,11 +26,10 @@ body, html {
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------------------------------------------
-   Header (Top Navigation Bar)
---------------------------------------------- */
 header {
   position: fixed;
   top: 0;
@@ -60,12 +51,10 @@ header h1 {
   user-select: none;
 }
 
-/* ---------------------------------------------
-   Navigation Buttons
---------------------------------------------- */
 nav {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 nav button {
@@ -78,17 +67,18 @@ nav button {
   padding: 10px 16px;
   border-radius: 8px;
   transition: background-color var(--transition-duration), color var(--transition-duration);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-nav button:hover {
+nav button:hover, nav button:focus {
   background-color: var(--color-primary);
   color: #fff;
   box-shadow: 0 0 10px var(--color-primary);
+  outline: none;
 }
 
-/* ---------------------------------------------
-   Social Media Icons
---------------------------------------------- */
 .social-icons {
   display: flex;
   align-items: center;
@@ -106,24 +96,23 @@ nav button:hover {
   cursor: pointer;
 }
 
-.social-icons a:hover {
+.social-icons a:hover, .social-icons a:focus {
   color: var(--color-accent);
   transform: scale(1.15);
+  outline: none;
 }
 
-/* ---------------------------------------------
-   Main Content Area
---------------------------------------------- */
 main {
   margin-top: 72px;
   width: 100%;
   padding: 40px 20px 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ---------------------------------------------
-   Sections Wrapper
---------------------------------------------- */
 section {
+  position: relative;
   width: 100%;
   background-color: var(--color-surface);
   border-radius: 12px;
@@ -132,9 +121,7 @@ section {
   box-shadow: 0 6px 15px rgba(0,0,0,0.5);
 }
 
-/* ---------------------------------------------
-   About Section Layout and Image Styling
---------------------------------------------- */
+/* About Section */
 .about-container {
   display: flex;
   align-items: center;
@@ -159,9 +146,6 @@ section {
   max-width: 500px;
 }
 
-/* ---------------------------------------------
-   Headings (Section Titles)
---------------------------------------------- */
 h2 {
   font-size: 2.4rem;
   font-weight: 700;
@@ -171,9 +155,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* ---------------------------------------------
-   Paragraphs and List Items
---------------------------------------------- */
 p, li {
   font-weight: 400;
   font-size: 1.125rem;
@@ -202,36 +183,78 @@ li::before {
   font-weight: 700;
 }
 
-/* ---------------------------------------------
-   Project Card Styling
---------------------------------------------- */
+/* Projects Section */
+#projects > .projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
 .project-card {
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 25px;
-  margin: 20px 0;
-  width: 100%;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 4px;
+  outline: none;
+  filter: drop-shadow(0 0 6px transparent);
+  user-select: none;
+  z-index: 0;
 }
 
-.project-card:hover {
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  border-radius: 50%;
+  filter: blur(12px);
+  opacity: 0;
+  background: var(--glow-color);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.project-card:hover,
+.project-card:focus {
   transform: translateY(-10px);
   box-shadow: 0 0 30px var(--color-accent);
+  outline: none;
+  filter: drop-shadow(0 0 12px var(--color-accent));
+  z-index: 10;
+}
+.project-card:hover::before,
+.project-card:focus::before {
+  opacity: 1;
 }
 
 .project-title {
-  font-size: 1.5rem;
+  margin-top: 14px;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 12px;
+  text-align: center;
+  user-select: text;
 }
 
-/* ---------------------------------------------
-   Download CV Button
---------------------------------------------- */
+/* Download CV Button */
 .btn-download-cv {
   display: inline-block;
   background-color: var(--color-primary);
@@ -248,13 +271,14 @@ li::before {
   width: max-content;
 }
 
-.btn-download-cv:hover {
+.btn-download-cv:hover,
+.btn-download-cv:focus {
   background-color: var(--color-accent);
   box-shadow: 0 0 30px var(--color-accent);
+  outline: none;
 }
-/* ---------------------------------------------
-   CV Preview Styling
---------------------------------------------- */
+
+/* CV Preview */
 .cv-preview {
   margin: 30px auto;
   max-width: 800px;
@@ -272,10 +296,7 @@ li::before {
   background-color: var(--color-surface);
 }
 
-
-/* ---------------------------------------------
-   Fade-in Animation (for Scroll Effect)
---------------------------------------------- */
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -295,9 +316,7 @@ li::before {
   }
 }
 
-/* ---------------------------------------------
-   Decorative Glowing Circles
---------------------------------------------- */
+/* Decorative Glowing Circles */
 .curved-decor {
   position: absolute;
   width: 140px;
@@ -333,9 +352,62 @@ li::before {
   }
 }
 
-/* ---------------------------------------------
-   Responsive Design (for mobile screens)
---------------------------------------------- */
+/* Footer Layout */
+footer {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  padding: 30px 40px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer > nav {
+  display: flex;
+  gap: 24px;
+}
+
+footer button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--transition-duration);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+footer button:hover,
+footer button:focus {
+  color: var(--color-accent);
+  background-color: rgba(70,52,231,0.1);
+  outline: none;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+footer .social-icons img {
+  width: 40px;
+  transition: transform var(--transition-duration);
+  cursor: pointer;
+}
+
+footer .social-icons img:hover,
+footer .social-icons img:focus {
+  transform: scale(1.15);
+  outline: none;
+}
+
+/* Responsive */
 @media (max-width: 700px) {
   header {
     padding: 14px 20px;
@@ -371,7 +443,106 @@ li::before {
     max-width: 100%;
   }
 
+  #projects > .projects-grid {
+    gap: 30px;
+  }
+
+  .project-wrapper {
+    width: 140px;
+  }
+
   .project-card {
+    width: 120px;
+    height: 120px;
+    padding: 0;
+  }
+
+  footer {
     padding: 20px;
+    gap: 15px;
+  }
+
+  footer > nav {
+    gap: 14px;
+  }
+
+  footer .social-icons {
+    gap: 20px;
+  }
+}
+
+/* Modal Styles */
+#project-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(18, 20, 23, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#project-modal.active {
+  display: flex;
+}
+
+#project-modal .modal-content {
+  background-color: var(--color-surface);
+  max-width: 700px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(70, 52, 231, 0.5);
+  position: relative;
+  padding: 30px 40px;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease forwards;
+}
+
+#project-modal .modal-content h3 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#project-modal .modal-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+#modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#modal-close-btn:hover,
+#modal-close-btn:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
