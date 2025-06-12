@@ -1,5 +1,5 @@
-/* Root Variables */
-/*:root {
+/*Root Variables */
+:root {
   --color-primary: #0A66C2;
   --color-secondary: #004182;
   --color-accent: #4634e7;
@@ -10,7 +10,7 @@
   --color-border: #2E333B;
   --transition-duration: 0.3s;
   --glow-color: rgba(70, 52, 231, 0.7);
-}*/
+}
 
 /* Reset and Base */
 * {
