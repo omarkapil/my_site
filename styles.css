@@ -29,7 +29,16 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* تصميم الفيديو كخلفية */
+#bg-video {
+  position: fixed;     /* يفضل الفيديو ثابت في الخلفية */
+  top: 0;
+  left: 0;
+  min-width: 100%;     /* يغطي عرض الشاشة بالكامل */
+  min-height: 100%;    /* يغطي طول الشاشة بالكامل */
+  object-fit: cover;   /* يخلي الفيديو يتظبط على حجم الشاشة */
+  z-index: -1;         /* يخلي الفيديو تحت كل العناصر */
+}
 header {
   position: fixed;
   top: 0;
