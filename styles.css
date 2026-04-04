@@ -558,6 +558,8 @@ body {
     color: var(--text-secondary);
     font-size: 1.5rem;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
 }
 
 .social-links a:hover {
