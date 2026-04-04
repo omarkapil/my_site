@@ -1,247 +1,275 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Omar Qapil - Cybersecurity & DevOps Professional</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4FXTFTQ1M"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D4FXTFTQ1M');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Abdelaziz Kapil | Cybersecurity Specialist & Cloud Architect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-   <video autoplay muted loop id="bg-video">
-    <source src="https://motionbgs.com/media/5599/binary-code-falling.960x540.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-  <header>
-    <h1>Omar Qapil</h1>
-    <p class="subtitle">Cybersecurity & DevOps Innovator</p>
-    <nav>
-      <button onclick="scrollToSection('about')" title="About Me" aria-label="About Me" >
-        <i class="fas fa-user"></i>
-      </button>
-      <button onclick="scrollToSection('cv')" title="My CV" aria-label="My CV">
-        <i class="fas fa-file-alt"></i>
-      </button>
-      <button onclick="scrollToSection('experience')" title="Experience" aria-label="Experience">
-        <i class="fas fa-briefcase"></i>
-      </button>
-      <button onclick="scrollToSection('projects')" title="Projects" aria-label="Projects">
-        <i class="fas fa-code"></i>
-      </button>
-      <div class="social-icons" role="group" aria-label="Social Media Links">
-        <a href="https://www.linkedin.com/in/omarkapil" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="LinkedIn" width="40" />
-        </a>
-        <a href="mailto:omarkapil012@gmail.com" title="Email" aria-label="Email">
-          <img src="images/email.png" alt="Email" width="40" />
-        </a>
-        <a href="https://wa.me/201009774927" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
-          <img src="images/whatsapp.png" alt="WhatsApp" width="40" />
-        </a>
-      </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">OAK<span class="highlight">_</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <section id="about" class="fade-in">
-      <div class="curved-decor decor1"></div>
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="photo-placeholder">
-          <img src="images/my_photo.jpg" alt="Omar Qapil" width="300" />
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">System.out.println("Hello World"); my name is</p>
+            <h1 class="name">Omar Abdelaziz Kapil</h1>
+            <h2 class="headline">Cybersecurity Specialist | Cloud Architect | Penetration Tester</h2>
+            <p class="location"><i class="fa-solid fa-location-dot"></i> Cairo, Egypt</p>
+            
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="OMAR_QAPIL_CV.pdf" class="btn btn-outline" download>Download CV</a>
+            </div>
         </div>
-        <div class="about-text">
-          <p>Hi, I’m Omar Qapil – a highly motivated and detail-driven final-year Computer Science student specializing in Cybersecurity and DevOps. I’m passionate about ethical hacking, network defense, and using automation to protect digital environments.</p>
-          <p>With certifications in CCNA and Network Security and hands-on experience in tools like Kali Linux, Wireshark, and Python-based IDS systems, I bring both technical know-how and a growth mindset to every challenge.</p>
-          <p>I believe in continuous learning and strive to make a meaningful impact in the cybersecurity world.</p>
+        <div class="hero-image-container">
+            <img src="images/profile.jpg" alt="Omar Abdelaziz Kapil" class="profile-img">
+            <div class="img-backdrop"></div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section id="cv" class="fade-in">
-      <div class="curved-decor decor2"></div>
-      <h2>My CV</h2>
-      <div class="cv-preview">
-        <iframe src="OMAR_QAPIL_CV.pdf" title="CV Preview" frameborder="0"></iframe>
-      </div>
-      <p>Download my full CV to explore my qualifications, skills, and journey in tech.</p>
-      <a href="OMAR_QAPIL_CV.pdf" class="btn-download-cv" download>Download CV</a>
-    </section>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title"><span class="highlight">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated Cybersecurity Specialist and Cloud Architect based in Cairo, currently completing my senior year at Helwan International Technology University. My technical expertise bridges the gap between offensive security—specializing in penetration testing and red teaming—and defensive infrastructure architecture. With practical experience developing automated security orchestration platforms and comprehensive training in advanced AWS cloud environments, I am passionate about building secure, resilient systems and proactively identifying vulnerabilities to protect critical assets.</p>
+                    <a href="OMAR_QAPIL_CV.pdf" class="btn btn-outline mt-2" download>Download CV</a>
+                </div>
 
-    <section id="experience" class="fade-in">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Cybersecurity Intern – IEEE Egypt Section</strong><br />
-          Applied Linux, Bash scripting, and Python tools to real-world scenarios. Explored encryption, malware analysis, SIEM, and DFIR in cloud environments.</li>
-        <li><strong>Cybersecurity Intern – Information Technology Institute (ITI)</strong><br />
-          Mastered advanced networking and cybersecurity fundamentals in intensive training programs.</li>
-        <li><strong>DevOps Intern – ISTEM EC</strong><br />
-          Learned and implemented DevOps architecture, CI/CD pipelines, and cloud integration concepts.</li>
-      </ul>
-    </section>
+                <!-- Education integrated into About -->
+                <div class="education-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                    <h4>Bachelor of Science in Cybersecurity</h4>
+                    <p class="institution">Helwan International Technology University (HITU)</p>
+                    <p class="status">Senior, Expected Graduation 2026</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects" class="fade-in">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-wrapper">
-          <button class="project-card" aria-haspopup="dialog" aria-controls="project-modal" data-project-index="0" aria-label="Open project: Machine Learning-Based IDS">
-            <div><i class="fas fa-robot fa-3x" aria-hidden="true"></i></div>
-          </button>
-          <div class="project-title">Machine Learning-Based IDS</div>
-        </div>
-        <div class="project-wrapper">
-          <button class="project-card" aria-haspopup="dialog" aria-controls="project-modal" data-project-index="1" aria-label="Open project: Interactive Portfolio Website">
-            <div><i class="fas fa-laptop-code fa-3x" aria-hidden="true"></i></div>
-          </button>
-          <div class="project-title">Interactive Portfolio Website</div>
-        </div>
-        <div class="project-wrapper">
-          <button class="project-card" aria-haspopup="dialog" aria-controls="project-modal" data-project-index="2" aria-label="Open project: Real-Time Chat App">
-            <div><i class="fas fa-comments fa-3x" aria-hidden="true"></i></div>
-          </button>
-          <div class="project-title">Real-Time Chat App</div>
-        </div>
-      </div>
-    </section>
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title"><span class="highlight">02.</span> Experience & Professional Training</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Security Specialist Intern – Infrastructure Security</h3>
+                        <h4>IBM</h4>
+                        <span class="date">Jan 2026 – Present</span>
+                        <ul>
+                            <li>Collaborating with the Infrastructure Security team to identify and mitigate risks within enterprise-level network architectures.</li>
+                            <li>Assisting in the deployment and management of security controls, including firewalls, IDS/IPS, and endpoint protection.</li>
+                            <li>Participating in vulnerability assessment workflows and threat intelligence gathering to ensure compliance with global security standards.</li>
+                        </ul>
+                        <p class="ref">Reference: IBM Talent Acquisition ID 81731</p>
+                    </div>
+                </div>
 
-    <footer>
-      <nav>
-        <button onclick="scrollToSection('about')" title="About Me" aria-label="About Me">
-          <i class="fas fa-user"></i>
-        </button>
-        <button onclick="scrollToSection('cv')" title="My CV" aria-label="My CV">
-          <i class="fas fa-file-alt"></i>
-        </button>
-        <button onclick="scrollToSection('experience')" title="Experience" aria-label="Experience">
-          <i class="fas fa-briefcase"></i>
-        </button>
-        <button onclick="scrollToSection('projects')" title="Projects" aria-label="Projects">
-          <i class="fas fa-code"></i>
-        </button>
-      </nav>
-      <div class="social-icons" role="group" aria-label="Social Media Links">
-        <a href="https://www.linkedin.com/in/omarkapil" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="LinkedIn" width="40" />
-        </a>
-        <a href="mailto:omarkapil012@gmail.com" title="Email" aria-label="Email">
-          <img src="images/email.png" alt="Email" width="40" />
-        </a>
-        <a href="https://wa.me/201009774927" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
-          <img src="images/whatsapp.png" alt="WhatsApp" width="40" />
-        </a>
-      </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Cloud Architect Summer Training (120 Hours)</h3>
+                        <h4>National Telecommunication Institute (NTI)</h4>
+                        <span class="date">Aug – Sep 2025</span>
+                        <p class="status">Grade: 87.5% (High Distinction)</p>
+                        <ul>
+                            <li><strong>Core Focus:</strong> Designing and deploying scalable, secure cloud infrastructure using Amazon Web Services (AWS).</li>
+                            <li><strong>Hands-on Labs:</strong> Managed IAM (Identity and Access Management) policies, automated workflows using AWS Lambda, and utilized CloudFormation for Infrastructure as Code (IaC).</li>
+                            <li><strong>Security Integration:</strong> Implemented VPC security groups, NACLs, and encryption protocols to secure cloud-native applications.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Computer Networking & Cybersecurity Essentials</h3>
+                        <h4>Information Technology Institute (ITI)</h4>
+                        <span class="date">Apr – May 2023</span>
+                        <ul>
+                            <li>Mastered the fundamentals of the OSI Model, TCP/IP protocols, and network switching/routing.</li>
+                            <li>Gained foundational knowledge in defensive security, including configuring secure networks and understanding common attack vectors.</li>
+                            <li>Developed a strong baseline in Linux administration and shell scripting for security-related tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title"><span class="highlight">03.</span> Technical Skills & Toolchain</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Offensive Security & Pen Testing</h3>
+                    <div class="skill-tags">
+                        <span>Red Teaming</span>
+                        <span>Vulnerability Assessment</span>
+                        <span>Network Exploitation</span>
+                        <span>Post-Exploitation</span>
+                        <span>Nmap</span>
+                        <span>Metasploit</span>
+                        <span>Burp Suite</span>
+                        <span>OpenVAS</span>
+                        <span>Wireshark</span>
+                        <span>Privilege Escalation</span>
+                        <span>Social Engineering</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-cloud"></i> Cloud Security & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span>AWS Cloud Architecture</span>
+                        <span>AWS IAM</span>
+                        <span>AWS Lambda</span>
+                        <span>VPC</span>
+                        <span>S3 Security</span>
+                        <span>AWS CloudFormation (IaC)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Development & DevSecOps</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Docker</span>
+                        <span>Docker Compose</span>
+                        <span>Git/GitHub</span>
+                        <span>Automation Scripting</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-network-wired"></i> Systems & Networking</h3>
+                    <div class="skill-tags">
+                        <span>Kali Linux</span>
+                        <span>Parrot Security OS</span>
+                        <span>RHEL</span>
+                        <span>Ubuntu Server</span>
+                        <span>TCP/IP</span>
+                        <span>DNS Security</span>
+                        <span>Firewalls</span>
+                        <span>VPNs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title"><span class="highlight">04.</span> Featured Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-rocket project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" aria-label="External Link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Found 404: Automated Security Orchestration Platform</h3>
+                    <p class="project-desc">A comprehensive security dashboard providing SMEs with enterprise-grade vulnerability management, automating the discovery-to-report pipeline.</p>
+                    
+                    <div class="project-details">
+                        <p><strong>Role:</strong> Project Lead (10-member team)</p>
+                        <p><strong>Impact:</strong> Reduces manual workload for security audits.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python/Flask</span>
+                        <span>Docker</span>
+                        <span>Nmap API</span>
+                        <span>OpenVAS API</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-shield-virus project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Network Intrusion Detection System (IDS)</h3>
+                    <p class="project-desc">Intelligent monitoring system designed to distinguish between normal network traffic and malicious activity (DDoS, Brute Force) in real-time.</p>
+                    
+                    <div class="project-details">
+                        <p><strong>Achievement:</strong> Minimized "False Positives" to ensure security teams focus on genuine threats.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python (ML)</span>
+                        <span>Scikit-learn</span>
+                        <span>Traffic Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-envelope-open-text project-icon"></i>
+                        <div class="project-links">
+                            <a href="#" aria-label="GitHub Link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ML-Powered Phishing Email Detector</h3>
+                    <p class="project-desc">Proactive defense tool combatting social engineering by analyzing email headers, body text, and URL structures to flag phishing attempts.</p>
+                    
+                    <div class="project-details">
+                        <p><strong>Impact:</strong> Automated first line of defense against credential theft.</p>
+                    </div>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>Predictive Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer">
+        <div class="contact-container">
+            <h2 class="contact-title">Get In Touch</h2>
+            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <a href="mailto:omarkapil012@email.com" class="btn btn-outline contact-btn">Say Hello</a>
+            
+            <div class="social-links">
+                <a href="https://github.com/omarkapil" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/omar-kapil" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <p class="copyright">Designed & Built by Omar Abdelaziz Kapil &copy; 2026</p>
     </footer>
-  </main>
 
-  <!-- Modal for Project Details -->
-  <div id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
-    <div class="modal-content" role="document">
-      <button id="modal-close-btn" aria-label="Close project details">&times;</button>
-      <h3 id="modal-title">Project Title</h3>
-      <img id="modal-image" src="" alt="" />
-      <p id="modal-description"></p>
-    </div>
-  </div>
-
-<script>
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
-
-  function onScroll() {
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const triggerBottom = window.innerHeight * 0.85;
-
-    fadeEls.forEach(el => {
-      const elTop = el.getBoundingClientRect().top;
-      if(elTop < triggerBottom) {
-        el.classList.add('visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('load', onScroll);
-
-  const projectsDetails = [
-    {
-      title: "Machine Learning-Based IDS",
-      image: "images/ml_ids.png",
-      description: `Developed a lightweight Intrusion Detection System using Python and ML. Integrated real-time threat detection with Wireshark/Nmap packet analysis and a custom GUI interface.`
-    },
-    {
-      title: "Interactive Portfolio Website",
-      image: "images/portfolio.png",
-      description: `A responsive and engaging personal website (this one!) designed using HTML, CSS, and JavaScript to showcase my work and passion.`
-    },
-    {
-      title: "Real-Time Chat App",
-      image: "images/chat_app.png",
-      description: `Built a live messaging platform with WebSocket, offering real-time updates and seamless user communication.`
-    },
-  ];
-
-  const modal = document.getElementById('project-modal');
-  const modalTitle = document.getElementById('modal-title');
-  const modalImage = document.getElementById('modal-image');
-  const modalDesc = document.getElementById('modal-description');
-  const modalCloseBtn = document.getElementById('modal-close-btn');
-
-  function openModal(index) {
-    const project = projectsDetails[index];
-    modalTitle.textContent = project.title;
-    modalImage.src = project.image;
-    modalImage.alt = project.title + " image";
-    modalDesc.textContent = project.description;
-    modal.classList.add('active');
-    modal.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove('active');
-  }
-
-  document.querySelectorAll('.project-card').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const index = parseInt(btn.dataset.projectIndex, 10);
-      if (!isNaN(index)) {
-        openModal(index);
-      }
-    });
-
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const index = parseInt(btn.dataset.projectIndex, 10);
-        if (!isNaN(index)) {
-          openModal(index);
-        }
-      }
-    });
-  });
-
-  modalCloseBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
